@@ -12,20 +12,47 @@
 	<script src="js/modernizr.js"></script> <!-- Modernizr -->
 
 	<title>My Digital Literacy Narrative</title>
+	<style>
+
+		div.avatar {
+			margin-left: 50%;
+			margin-top: 7%;
+		}
+
+		.cd-horizontal-timeline {
+			margin-top: 0;
+		}
+
+		.hidden {
+			display: none;
+
+		}
+
+
+
+
+
+	</style>
 </head>
 <body>
+
+
 <section class="cd-horizontal-timeline">
+	<div class="avatar">
+		<p id="level-up" class="hidden">+1 EXP</p>
+		<img class="avatar center" src="img/avatar.png" alt="avatar" width="50px">
+	</div>
 	<div class="timeline">
 		<div class="events-wrapper">
 			<div class="events">
 				<ol>
 					<li><a href="#0" data-date="01/01/1998" class="selected">1998</a></li>
-					<li><a href="#0" data-date="01/02/1998">2000</a></li>
-					<li><a href="#0" data-date="01/03/1998">2000</a></li>
-					<li><a href="#0" data-date="01/04/1998">2003</a></li>
-					<li><a href="#0" data-date="01/05/1998">2006</a></li>
-					<li><a href="#0" data-date="01/06/1998">2010</a></li>
-					<li><a href="#0" data-date="01/08/1998">2017</a></li>
+					<li><a href="#0" class="clicked" data-date="01/02/1998">2000</a></li>
+					<li><a href="#0" class="clicked" data-date="01/03/1998">2000</a></li>
+					<li><a href="#0" class="clicked" data-date="01/04/1998">2003</a></li>
+					<li><a href="#0" class="clicked" data-date="01/05/1998">2006</a></li>
+					<li><a href="#0" class="clicked" data-date="01/06/1998">2010</a></li>
+					<li><a href="#0" class="clicked" data-date="01/08/1998">2017</a></li>
 				</ol>
 
 				<span class="filling-line" aria-hidden="true"></span>
@@ -43,18 +70,11 @@
 			<li class="selected" data-date="01/01/1998">
 				<h2>First Encounter</h2>
 				<em>1998</em>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-				</p>
-				<br>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
+				<p style="color:#4c4c4c">
+					My first meaningful encounter with a computer was with my parents' computer, an old Mac they used for word processing documents.  I was probably around 6 or 7 years old when my older sister, older brother would play Caveman Ninja, while I would mostly watch (since I would die too soon).
+					I found this game online, and I have decided to replay it, to see if it is really as hard as I remember.
 				</p>
 
-				<br>
-				<p>
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum praesentium officia, fugit recusandae ipsa, quia velit nulla adipisci? Consequuntur aspernatur at, eaque hic repellendus sit dicta consequatur quae, ut harum ipsam molestias maxime non nisi reiciendis eligendi! Doloremque quia pariatur harum ea amet quibusdam quisquam, quae, temporibus dolores porro doloribus.
-				</p>
 			</li>
 
 			<li data-date="01/02/1998">
@@ -109,12 +129,24 @@
 		</ol>
 	</div> <!-- .events-content -->
 
-	
+
 
 </section>
 
 <script src="js/jquery-2.1.4.js"></script>
 <script src="js/jquery.mobile.custom.min.js"></script>
 <script src="js/main.js"></script> <!-- Resource jQuery -->
+
+
+<script>
+	$(document).ready(function() {
+		$(".hidden").fadeIn(500).removeClass('hidden').fadeOut();
+
+		$(".clicked").click(function() {
+			$("#level-up").fadeIn().fadeOut();
+		});
+
+	});
+</script>
 </body>
 </html>
