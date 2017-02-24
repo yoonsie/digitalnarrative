@@ -7,12 +7,10 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.1.min.js"></script>
     <style>
 
       html, body {
@@ -27,41 +25,48 @@
         -moz-background-size: cover;
         background-size: cover;
         background-repeat: no-repeat;
+        background-color: #306FA0;
       }
 
       img#desktop-shortcut {
         padding-bottom: 0;
         margin-left: -10px;
         margin-top: 40%;
+        width: 145px;
       }
 
     </style>
 
   </head>
-  <body>
+  <body onLoad="$('#infoModal').modal('show');">
     <div class="container-fluid">
 
 
 
 
       <div class="col-sm-3">
-
       </div>
 
       <div class="col-sm-9">
 
-        <a href="narrative.html"><img id="desktop-shortcut" src="img/shortcut.png" alt="Desktop shortcut to start the narrative" width="145px">
+        <a href="narrative.html"><img id="desktop-shortcut" src="img/shortcut.png" alt="Desktop shortcut to start the narrative">
         </a>
       </div>
 
 
-
-    </div>
-
+    </div><!-- Container -->
 
 
 
 
+
+    <script>
+      $(document).ready(function() {
+        $("#desktop-shortcut").click(function() {
+          alert("For my Digital Literacy Narrative, I have decided to revisit the games, websites, and applications that have influenced me and my attitude towards computers. Please join me as I revisit nostalgiac objects of my past.");
+        });
+      });
+    </script>
 
   </body>
 </html>
